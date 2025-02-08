@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Vans from "./pages/Vans";
-import VanDetail from "./pages/VanDetail";
+import Vans from "./pages/vans/Vans";
+import VanDetail from "./pages/vans/VanDetail";
 import Layout from "./components/Layout";
 
 import "./server";
