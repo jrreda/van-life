@@ -20,6 +20,7 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+/* --------- Header --------- */
 nav {
     display: flex;
     gap: 1em;
@@ -69,6 +70,9 @@ section.hero > p {
     line-height: 24px;
     margin-top: 1.375em;
 }
+/* --------- End Header --------- */
+
+/* --------- General --------- */
 button.link-button {
     border: none;
     border-radius: 5px;
@@ -85,6 +89,29 @@ button.link-button {
     height: 50px;
     margin-top: 3.25em;
 }
+/* --------- End General --------- */
+
+/* --------- Footer --------- */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25em;
+
+    background-color: #252525;
+    color: #AAAAAA;
+
+    height: 75px;
+
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+footer > span {
+    font-size: 18px;
+}
+/* --------- End Footer --------- */
 
 /* About */
 section.about > img {
@@ -137,7 +164,7 @@ section.about > img {
 /* Vans */
 section.vans {
     color: var(--dark-color);
-    padding: 0 26px;
+    padding: 0 26px 3em 26px;
 }
 section.vans > h2 {
     font-weight: 700;
@@ -257,9 +284,8 @@ section.vans > h2 {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    /* margin-top: 1.5em; */
 }
 .van-detail .van-detail-info .link-button {
     margin-top: 22px;
-    margin-bottom: 84px;
+    margin-bottom: 3em;
 }
