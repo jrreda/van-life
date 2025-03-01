@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return (
         <header>
-            <Link to="/">#VANLIFE</Link>
+            <NavLink to="/">#VANLIFE</NavLink>
             <nav>
-                <Link to="/about">About</Link>
-                <Link to="/vans">Vans</Link>
+                <NavLink to="/host">Host</NavLink>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/vans">Vans</NavLink>
             </nav>
         </header>
     );

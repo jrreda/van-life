@@ -15,7 +15,7 @@ export default function VanDetail() {
         <section className="van-detail">
             {van ? (
                 <>
-                    <div className="header">
+                    <div className="van-header">
                         <span className="icon">&larr;</span>
                         <Link to="/vans" className="back-button">
                             Back to all vans
