@@ -239,6 +239,39 @@ section.vans > h2 {
     background-color: var(--dark-color);
 }
 
+/* van filters */
+.van-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 3em;
+}
+.van-filters button {
+    text-decoration: none;
+    color: #4D4D4D;
+    background-color: #FFEAD0;
+    padding: 0.25em 0.5em;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    cursor: pointer;
+}
+.van-filters button.active {
+    color: var(--light-color);
+}
+.van-filters .clear-filters {
+    color: #000;
+    background-color: transparent;
+    text-decoration: underline;
+    padding: 0.5em 1em;
+    margin-left: 1em;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
 /* van detail */
 .van-detail {
     padding: 0 26px;
