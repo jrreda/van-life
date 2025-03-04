@@ -25,7 +25,7 @@ export default function HostVans() {
     ));
 
     return (
-        <section className="host-Vans">
+        <section className="container host-Vans">
             <h1>Your listed vans</h1>
             <div className="host-vans-list">{vanElements}</div>
         </section>

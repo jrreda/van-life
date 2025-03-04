@@ -12,11 +12,12 @@ import Reviews from "./pages/Host/Reviews";
 import HostLayout from "./components/HostLayout";
 import HostVans from "./pages/Host/HostVans";
 import HostVanDetail from "./pages/Host/HostVanDetail";
-
-import "./server";
 import HostVanPricing from "./pages/Host/HostVanPricing";
 import HostVanPhotos from "./pages/Host/HostVanPhotos";
 import HostVanInfo from "./pages/Host/HostVanInfo";
+import NotFound from "./pages/NotFound";
+
+import "./server";
 
 function App() {
     return (
@@ -42,6 +43,8 @@ function App() {
                             <Route path="photos" element={<HostVanPhotos />} />
                         </Route>
                     </Route>
+
+                    <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>
         </BrowserRouter>

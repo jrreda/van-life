@@ -14,7 +14,7 @@ export default function VanDetail() {
     }, [params.id]);
 
     return (
-        <section className="van-detail">
+        <section className="container van-detail">
             {van ? (
                 <>
                     <div className="van-header">

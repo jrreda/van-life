@@ -3,7 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 export default function HostLayout() {
     return (
         <>
-            <nav className="host-nav">
+            <nav className="container host-nav">
                 <NavLink end to=".">
                     Dashboard
                 </NavLink>
