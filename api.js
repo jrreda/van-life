@@ -33,3 +33,21 @@ export async function getHostVans(id) {
     const data = await res.json();
     return data.vans;
 }
+
+export async function loginUser(credentials) {
+    const res = await fetch("/api/login", {
+        method: "post",
+        body: JSON.stringify(credentials),
+    });
+    const data = await res.json();
+
+    if (!res.ok || !res.status === 401 || !data.token) {
+        throw {
+            message: data.message,
+            statusText: res.statusText,
+            status: res.status,
+        };
+    }
+
+    return data;
+}
