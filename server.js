@@ -85,6 +85,9 @@ createServer({
         this.namespace = "api";
         this.logging = false;
 
+        // Forward requests to Firestore
+        this.passthrough("https://firestore.googleapis.com/**");
+
         this.get("/vans", (schema, request) => {
             return schema.vans.all();
         });
