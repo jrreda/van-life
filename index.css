@@ -23,6 +23,18 @@ body::-webkit-scrollbar {
 /* General */
 .container {
     padding: 0 26px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 60px;
+    }
 }
 .text-danger {
     color: #FF0000;
@@ -57,6 +69,18 @@ header {
     background-color: var(--light-color);
     /* height: 112px; */
     padding: 2.25em 1.5625em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    header {
+        padding: 2.25em 40px;
+    }
+}
+@media (min-width: 1024px) {
+    header {
+        padding: 2.25em 60px;
+    }
 }
 header > a {
     font-weight: 900;
@@ -64,12 +88,30 @@ header > a {
     color: #000;
     text-decoration: none;
 }
+@media (min-width: 768px) {
+    header > a {
+        font-size: 28px;
+    }
+}
 
 section.hero {
     padding: 4.0625em 1.5625em;
     color: #FFF;
     background-image: url('./assets/images/hero.png');
     background-size: cover;
+    background-position: center;
+}
+@media (min-width: 768px) {
+    section.hero {
+        padding: 6em 40px;
+    }
+}
+@media (min-width: 1024px) {
+    section.hero {
+        padding: 8em 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 section.hero > h1 {
     font-weight: 800;
@@ -77,11 +119,37 @@ section.hero > h1 {
     line-height: 42px;
     margin: 0;
 }
+@media (min-width: 768px) {
+    section.hero > h1 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+@media (min-width: 1024px) {
+    section.hero > h1 {
+        font-size: 56px;
+        line-height: 66px;
+        max-width: 600px;
+    }
+}
 section.hero > p {
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
     margin-top: 1.375em;
+}
+@media (min-width: 768px) {
+    section.hero > p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+@media (min-width: 1024px) {
+    section.hero > p {
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 600px;
+    }
 }
 /* --------- End Header --------- */
 
@@ -101,6 +169,18 @@ button.link-button {
     width: 100%;
     height: 50px;
     margin-top: 3.25em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+button.link-button:hover {
+    background-color: #E67A2E;
+}
+@media (min-width: 768px) {
+    button.link-button {
+        max-width: 400px;
+        height: 55px;
+        font-size: 18px;
+    }
 }
 /* --------- End General --------- */
 
@@ -129,10 +209,24 @@ footer > span {
 /* About */
 section.about > img {
     width: 100%;
+    max-height: 500px;
+    object-fit: cover;
 }
 .about-content {
     padding: 3em 1.75em;
     color: var(--dark-color);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .about-content {
+        padding: 4em 40px;
+    }
+}
+@media (min-width: 1024px) {
+    .about-content {
+        padding: 5em 60px;
+    }
 }
 .about-content > h2 {
     font-weight: 700;
@@ -140,11 +234,36 @@ section.about > img {
     line-height: 38px;
     margin: 0;
 }
+@media (min-width: 768px) {
+    .about-content > h2 {
+        font-size: 40px;
+        line-height: 48px;
+    }
+}
+@media (min-width: 1024px) {
+    .about-content > h2 {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
 .about-content > p {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     margin-top: 2em;
+}
+@media (min-width: 768px) {
+    .about-content > p {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+@media (min-width: 1024px) {
+    .about-content > p {
+        font-size: 20px;
+        line-height: 32px;
+        max-width: 800px;
+    }
 }
 .about-content-box {
     padding: 2em 2.375em;
@@ -152,11 +271,22 @@ section.about > img {
     background-color: var(--secondary-color);
     border-radius: 5px;
 }
+@media (min-width: 1024px) {
+    .about-content-box {
+        max-width: 800px;
+    }
+}
 .about-content-box > h3 {
     font-weight: 700;
     font-size: 24px;
     line-height: 30px;
     margin: 0;
+}
+@media (min-width: 768px) {
+    .about-content-box > h3 {
+        font-size: 28px;
+        line-height: 36px;
+    }
 }
 .about-content-box button {
     border: none;
@@ -172,12 +302,36 @@ section.about > img {
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.about-content-box button:hover {
+    background-color: #2b2b2b;
+}
+@media (min-width: 768px) {
+    .about-content-box button {
+        width: 200px;
+        height: 54px;
+        font-size: 18px;
+    }
 }
 
 /* Vans */
 section.vans {
     color: var(--dark-color);
     padding: 0 26px 3em 26px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    section.vans {
+        padding: 0 40px 3em 40px;
+    }
+}
+@media (min-width: 1024px) {
+    section.vans {
+        padding: 0 60px 3em 60px;
+    }
 }
 section.vans > h2 {
     font-weight: 700;
@@ -186,14 +340,31 @@ section.vans > h2 {
     margin: 0;
     padding: 55px 0 22px 0;
 }
+@media (min-width: 768px) {
+    section.vans > h2 {
+        font-size: 40px;
+        line-height: 42px;
+    }
+}
 .vans-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+@media (min-width: 768px) {
+    .vans-list {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+}
+@media (min-width: 1024px) {
+    .vans-list {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 35px;
+    }
+}
 .van-tile {
-    width: 47%;
+    width: 100%;
 }
 .vans-list a {
     text-decoration: none;
@@ -299,11 +470,23 @@ section.vans > h2 {
     font-size: 16px;
     line-height: 24px;
 }
+.van-detail {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .van-detail .van-detail-info img {
     width: 100%;
     border-radius: 5px;
     margin-top: 40px;
     margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+    .van-detail .van-detail-info img {
+        max-width: 600px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 .van-detail .van-detail-info .van-type {
     font-weight: 600;
@@ -356,6 +539,10 @@ section.vans > h2 {
 }
 
 /* Vans */
+.host-vans {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .host-vans h2 {
     font-weight: 700;
     font-size: 32px;
@@ -363,11 +550,30 @@ section.vans > h2 {
     margin: 0;
     padding: 55px 0 22px 0;
 }
+@media (min-width: 768px) {
+    .host-vans h2 {
+        font-size: 40px;
+        line-height: 42px;
+    }
+}
 .host-vans .host-vans-list {
     display: flex;
     flex-direction: column;
     gap: 1em;
     margin-bottom: 3em;
+}
+@media (min-width: 768px) {
+    .host-vans .host-vans-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
+    }
+}
+@media (min-width: 1024px) {
+    .host-vans .host-vans-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2em;
+    }
 }
 .host-vans-list-item a {
     display: flex;
@@ -405,6 +611,13 @@ section.vans > h2 {
     margin-block: 40px;
     padding: 25px;
     background-color: #FFF;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+@media (min-width: 768px) {
+    .host-van-detail-info {
+        padding: 40px;
+    }
 }
 .host-van-detail-info .header {
     display: flex;
@@ -501,6 +714,18 @@ section.vans > h2 {
 .host-income {
     padding-inline: 26px;
     color: #161616;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .host-income {
+        padding-inline: 40px;
+    }
+}
+@media (min-width: 1024px) {
+    .host-income {
+        padding-inline: 60px;
+    }
 }
 .host-income > p {
     color: #4d4d4d;
@@ -556,6 +781,18 @@ img.graph {
 .host-reviews {
     padding-inline: 26px;
     color: #161616;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .host-reviews {
+        padding-inline: 40px;
+    }
+}
+@media (min-width: 1024px) {
+    .host-reviews {
+        padding-inline: 60px;
+    }
 }
 .host-reviews .top-text {
     display: flex;
@@ -615,12 +852,21 @@ img.graph {
     align-items: center;
     justify-content: center;
     margin-block: 100px;
+    padding-inline: 26px;
+    max-width: 600px;
+    margin-inline: auto;
 }
 .not-found h1 {
     font-weight: 700;
     font-family: Inter;
     font-size: 32px;
     line-height: 42px;
+}
+@media (min-width: 768px) {
+    .not-found h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
 }
 .not-found a {
     font-family: Inter;
@@ -634,7 +880,12 @@ img.graph {
     color: #FFF;
     border-radius: 5px;
     width: 100%;
+    max-width: 400px;
     padding: 0.5em 0;
+    transition: background-color 0.2s ease;
+}
+.not-found a:hover {
+    background-color: #2b2b2b;
 }
 
 /* login page */
@@ -644,6 +895,13 @@ img.graph {
     align-items: center;
     justify-content: center;
     margin-block: 50px;
+    padding-inline: 26px;
+}
+@media (min-width: 768px) {
+    .login {
+        padding-inline: 40px;
+        margin-block: 80px;
+    }
 }
 .login h1 {
     font-family: Inter;
@@ -653,18 +911,34 @@ img.graph {
     text-align: center;
     margin-bottom: 50px;
 }
+@media (min-width: 768px) {
+    .login h1 {
+        font-size: 40px;
+        line-height: 32px;
+    }
+}
 .login-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 }
 .login-form input {
     width: 100%;
     height: 50px;
     border: 1px solid #DADADA;
     padding: 0 10px;
+    font-size: 16px;
+}
+@media (min-width: 768px) {
+    .login-form input {
+        height: 55px;
+        padding: 0 15px;
+        font-size: 18px;
+    }
 }
 .login-form input[type="email"] {
     border-top-right-radius: 6px;
@@ -687,5 +961,15 @@ img.graph {
     line-height: 24px;
     margin-top: 20px;
     cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+@media (min-width: 768px) {
+    .login-form button {
+        height: 55px;
+        font-size: 20px;
+    }
+}
+.login-form button:hover {
+    background-color: #E67A2E;
 }
 
