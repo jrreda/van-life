@@ -6,6 +6,8 @@ import {
   getDocs,
   doc,
   getDoc,
+  query,
+  where,
 } from "firebase/firestore";
 
 // Your web app's Firebase configuration
@@ -50,10 +52,26 @@ export async function getVan(id) {
   try {
     const docRef = doc(db, "vans", id);
     const snapshot = await getDoc(docRef);
-    const van = {id, ...snapshot.data()};
+    const van = { id, ...snapshot.data() };
     return van;
   } catch (error) {
     console.error("Error fetching van:", error);
+    throw error;
+  }
+}
+
+// TODO: implement a real authentication system
+export async function getHostVans() {
+  try {
+    const q = query(vansCollectionRef, where("hostId", "==", "123"));
+    const snapshot = await getDocs(q);
+    const vans = snapshot.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    return vans;
+  } catch (error) {
+    console.error("Error fetching vans:", error);
     throw error;
   }
 }
@@ -81,19 +99,19 @@ function sleep(ms) {
 //   return data.vans;
 // }
 
-export async function getHostVans(id) {
-  const url = id ? `/api/host/vans/${id}` : "/api/host/vans";
-  const res = await fetch(url);
-  if (!res.ok) {
-    throw {
-      message: "Failed to fetch vans",
-      statusText: res.statusText,
-      status: res.status,
-    };
-  }
-  const data = await res.json();
-  return data.vans;
-}
+// export async function getHostVans(id) {
+//   const url = id ? `/api/host/vans/${id}` : "/api/host/vans";
+//   const res = await fetch(url);
+//   if (!res.ok) {
+//     throw {
+//       message: "Failed to fetch vans",
+//       statusText: res.statusText,
+//       status: res.status,
+//     };
+//   }
+//   const data = await res.json();
+//   return data.vans;
+// }
 
 export async function loginUser(credentials) {
   const res = await fetch("/api/login", {
